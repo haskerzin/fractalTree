@@ -37,22 +37,22 @@ let drawTree = (angle, steps) =>{
             // drawing the branches from the left side
             createLine( branchOrigin[j][0],
                         branchOrigin[j][1],
-                        branchOrigin[j][0] - Math.sin(angle)*initialLength*growthFactor,
-                        branchOrigin[j][1] - Math.cos(angle)*initialLength*growthFactor,
+                        branchOrigin[j][0] - Math.sin((i*0.1+1)*angle)*initialLength*growthFactor,
+                        branchOrigin[j][1] - Math.cos((i*0.1+1)*angle)*initialLength*growthFactor,
                         'white');
 
             // drawing the branches from the right side
             createLine( branchOrigin[j][0],
                         branchOrigin[j][1],
-                        branchOrigin[j][0] + Math.sin(angle)*initialLength*growthFactor,
-                        branchOrigin[j][1] - Math.cos(angle)*initialLength*growthFactor,
+                        branchOrigin[j][0] + Math.sin((i*0.1+1)*angle)*initialLength*growthFactor,
+                        branchOrigin[j][1] - Math.cos((i*0.1+1)*angle)*initialLength*growthFactor,
                         'white');
             
             // Saving the new branch origins
-            newBranchOrigin.push([branchOrigin[j][0] - Math.sin(angle)*initialLength*growthFactor,
-                                 branchOrigin[j][1] - Math.cos(angle)*initialLength*growthFactor],
-                                 [branchOrigin[j][0] + Math.sin(angle)*initialLength*growthFactor,
-                                 branchOrigin[j][1] - Math.cos(angle)*initialLength*growthFactor]);
+            newBranchOrigin.push([branchOrigin[j][0] - Math.sin((i*0.1+1)*angle)*initialLength*growthFactor,
+                                 branchOrigin[j][1] - Math.cos((i*0.1+1)*angle)*initialLength*growthFactor],
+                                 [branchOrigin[j][0] + Math.sin((i*0.1+1)*angle)*initialLength*growthFactor,
+                                 branchOrigin[j][1] - Math.cos((i*0.1+1)*angle)*initialLength*growthFactor]);
             
             
             
